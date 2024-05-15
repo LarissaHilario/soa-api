@@ -12,12 +12,10 @@ export class OrderUseCase {
       throw new Error('Error creating the order');
     }
   }
-
-
+  
   async ordersList(): Promise<Order[]> {
     return this.orderService.ordersList();
   }
-
   async updateOrder(orderId: string, status: 'Created' | 'Paid' | 'Sent'): Promise<Order | null> {
     return this.orderService.updateOrder(orderId, status);
   }

@@ -12,8 +12,6 @@ export class OrderUseCase {
       throw new Error('Error creating order');
     }
   }
-
-
   async ordersList(): Promise<Order[]> {
     return this.orderService.ordersList();
   }
